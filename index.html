@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Σύμβουλος Επιχειρήσεων & Ασφαλιστικός Σύμβουλος</title>
+    <style>
+        body {
+            font-family: Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        header, section {
+            background-color: white;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: none; /* Default all sections to be hidden */
+        }
+        #about { /* Only the about section is visible initially */
+            display: block;
+        }
+        nav a {
+            cursor: pointer;
+            padding: 10px;
+            background: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-right: 5px;
+        }
+        nav a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Σύμβουλος Επιχειρήσεων & Ασφαλιστικός Σύμβουλος</h1>
+    </header>
+    <nav>
+        <a onclick="showSection('about')">Σχετικά με εμένα</a>
+        <a onclick="showSection('business-services')">Υπηρεσίες - Σύμβουλος Επιχειρήσεων</a>
+        <a onclick="showSection('insurance-services')">Υπηρεσίες - Ασφαλιστικός Σύμβουλος</a>
+        <a onclick="showSection('webinars')">Webinars</a>
+        <a onclick="showSection('testimonials')">Μαρτυρίες Πελατών</a>
+        <a onclick="showSection('contact')">Επικοινωνία</a>
+    </nav>
+    <section id="about">
+        <h2>Σχετικά με εμένα</h2>
+        <p>Είμαι ένας έμπειρος σύμβουλος επιχειρήσεων και ασφαλιστικός σύμβουλος με πολυετή εμπειρία στον χώρο.</p>
+    </section>
+    <section id="business-services" style="display:none;">
+        <h2>Υπηρεσίες - Σύμβουλος Επιχειρήσεων</h2>
+        <p>Προσφέρω στρατηγικές συμβουλές για την ανάπτυξη της επιχείρησής σας, ανάλυση αγοράς και επιχειρησιακό σχεδιασμό.</p>
+    </section>
+    <section id="insurance-services" style="display:none;">
+        <h2>Υπηρεσίες - Ασφαλιστικός Σύμβουλος</h2>
+        <p>Παρέχω εξειδικευμένες ασφαλιστικές λύσεις για ιδιώτες και επιχειρήσεις, προσαρμοσμένες στις ανάγκες σας.</p>
+    </section>
+    <section id="webinars" style="display:none;">
+        <h2>Webinars</h2>
+        <p>Ενημερωθείτε για τα επερχόμενα webinars και δείτε τα προηγούμενα σεμινάρια μου.</p>
+    </section>
+    <section id="testimonials" style="display:none;">
+        <h2>Μαρτυρίες Πελατών</h2>
+        <p>"Η συνεργασία μας ήταν εξαιρετική, επαγγελματίας με γνώσεις και συνέπεια." - Πελάτης Α</p>
+        <p>"Οι υπηρεσίες του ήταν καταλυτικές για την επιτυχία της επιχειρήσής μας." - Πελάτης Β</p>
+    </section>
+    <section id="contact" style="display:none;">
+        <h2>Επικοινωνία</h2>
+        <p>Email: info@example.com</p>
+        <p>Τηλέφωνο: +30 210 1234567</p>
+    </section>
+    <footer>
+        <p>© 2024 Σύμβουλος Επιχειρήσεων & Ασφαλιστικός Σύμβουλος. All rights reserved.</p>
+    </footer>
+    <script>
+        function showSection(id) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+            // Show the selected section
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
